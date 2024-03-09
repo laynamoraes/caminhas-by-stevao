@@ -25,7 +25,6 @@ export default function InputForm({ label, type, ...props }: InputFormProps) {
       >
         {label}
       </label>
-      <input type={type} {...field} {...props} />
       <span
         style={{
           color: "#f45",
@@ -33,6 +32,8 @@ export default function InputForm({ label, type, ...props }: InputFormProps) {
       >
         {error}
       </span>
+      <br />
+      <input type={type} {...field} {...props} />
     </div>
   )
 }

@@ -4,6 +4,7 @@ import Home from "../pages/Home/index"
 import SignIn from "../pages/SignIn"
 import Register from "../pages/Register"
 import Ecommerce from "../pages/Ecommerce"
+import PrivateRoute from "./PrivateRoute"
 
 const routes = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ const routes = createBrowserRouter([
   },
   {
     path: "/ecommerce",
-    element: <Ecommerce />,
+    element: (
+      <PrivateRoute>
+        <Ecommerce />
+      </PrivateRoute>
+    ),
   },
 ])
 
