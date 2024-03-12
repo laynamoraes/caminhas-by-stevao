@@ -150,5 +150,175 @@
       "email": "joao@email.com",
       "password": "123456"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Caminha em forma de Banana",
+      "description": "Cama de cachorro calmante de pelúcia proporciona uma sensação de segurança para os animais de estimação dormirem em um ambiente escuro, uma decoração perfeita para qualquer quarto, projetada com uma forma de banana de desenho especial e bonita.",
+      "price": 199.99,
+      "image": "./src/assets/banana.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Caminha tipo Berço em madeira",
+      "description": "Cama para cachorro médio porte 73cm. Essa cama é feita em madeira, o que garante durabilidade e resistência, tornando-a perfeita para o seu pet.",
+      "price": 249.99,
+      "image": "./src/assets/bed.avif"
+    },
+    {
+      "id": 3,
+      "name": "Caminha Toca Temática Abelha",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/bee.webp"
+    },
+    {
+      "id": 4,
+      "name": "Caminha Barco de Pelúcia",
+      "description": "A Caminha Barco de Pelúcia é super confortável e totalmente resistente para o seu cão aproveitar. A base é impermeável, podendo ser colocada em qualquer tipo de superfície. Ela é desmontável e lavável para garantir a praticidade na limpeza, para isso basta retirar o enchimento e lavar a capa!",
+      "price": 249.99,
+      "image": "./src/assets/boat.png"
+    },
+    {
+      "id": 5,
+      "name": "Caminha Box Pet",
+      "description": "A Caminha Box Pet é uma cama box especial para seu amigo de quatro patas. Com materiais de alta qualidade a caminha é super resistente, e deixa o cantinho do seu melhor amigo com um toque de sofisticação.",
+      "price": 169.99,
+      "image": "./src/assets/box-bed.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Caminha Beliche Moderna",
+      "description": "A Caminha Beliche tem acabamento em aço super resistente e é indicado para os donos mais “moderninhos”, e deixa o cantinho do seu melhor amigo com um toque de sofisticação.",
+      "price": 299.99,
+      "image": "./src/assets/bunkbed.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Caminha Toca Temática Vaca",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/cow.webp"
+    },
+    {
+      "id": 8,
+      "name": "Caminha Crocs",
+      "description": "A Caminha Crocs é a pegada original para o seu pequeno animal de estimação. É feito de material muito resistente, atóxico e resistente a odores.",
+      "price": 299.99,
+      "image": "./src/assets/crocs.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Caminha Toca Temática Girafa",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/giraffe.png"
+    },
+    {
+      "id": 10,
+      "name": "Almofada Harry Potter",
+      "description": "A Almofada Harry Potter é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria e para os donos apaixonados por Harry Potter.",
+      "price": 169.99,
+      "image": "./src/assets/harry-potter.webp"
+    },
+    {
+      "id": 11,
+      "name": "Caminha Hot Dog Divertida",
+      "description": "A Cama Hot Dog é garantia de conforto e diversão para você e seu bichinho.",
+      "price": 99.99,
+      "image": "./src/assets/hot-dog.webp"
+    },
+    {
+      "id": 12,
+      "name": "Mansão dos Sonhos Pet",
+      "description": "A Mansão dos Sonhos oferece muito conforto para o seu pet. Feito de esponja de alta qualidade, macia e confortável, com bom efeito de isolamento térmico, proporcionando aos animais de estimação um sono confortável.",
+      "price": 299.99,
+      "image": "./src/assets/mansion.webp"
+    },
+    {
+      "id": 13,
+      "name": "Almofada Patinha",
+      "description": "Proporciona ao seu animal de estimação uma cama aconchegante para brincar, descansar e dormir. Com o lindo design em formato de pata, ele vai adicionar diversão ao seu cão, fazendo-o relaxar.",
+      "price": 129.99,
+      "image": "./src/assets/paw.webp"
+    },
+    {
+      "id": 14,
+      "name": "Caminha Toca Temática Abacaxi",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/pineapple.webp"
+    },
+    {
+      "id": 15,
+      "name": "Almofada Pizza",
+      "description": "Proporciona ao seu animal de estimação uma cama aconchegante para brincar, descansar e dormir. Com o lindo e delicioso design de pizza, ele vai adicionar diversão ao seu cão, fazendo-o relaxar.",
+      "price": 99.99,
+      "image": "./src/assets/pizza.webp"
+    },
+    {
+      "id": 16,
+      "name": "Caminha Toca Temática Pokebola",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/pokeball.webp"
+    },
+    {
+      "id": 17,
+      "name": "Caminha Toca Temática Pantufa",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/slipper.webp"
+    },
+    {
+      "id": 18,
+      "name": "Caminha Toca Temática Pantufa",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/slipper.webp"
+    },
+    {
+      "id": 19,
+      "name": "Caminha Temática Pikachu",
+      "description": "A Cama Temática Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 119.99,
+      "image": "./src/assets/pikachu.webp"
+    },
+    {
+      "id": 20,
+      "name": "Caminha Temática Stitch",
+      "description": "A Cama Temática Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 119.99,
+      "image": "./src/assets/stitch.webp"
+    },
+    {
+      "id": 21,
+      "name": "Caminha Toca Temática Sweet",
+      "description": "A Cama Toca Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 169.99,
+      "image": "./src/assets/sweet.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Caminha Tenda",
+      "description": "A Tenda Pet é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 129.99,
+      "image": "./src/assets/tent.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Caminha Temática Baleia",
+      "description": "A Caminha Temática Baleia é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 139.99,
+      "image": "./src/assets/whale.webp"
+    },
+    {
+      "id": 24,
+      "name": "Caminha Temática Yoda",
+      "description": "A Caminha Temática Baleia é garantia de conforto para seu bichinho tanto nos dias quentes quanto nas noites mais fria. Com a toquinha seu animal vai se sentir mais seguro e confortável garantindo um ambiente mais relaxado e calmo para que durma com mais facilidade.",
+      "price": 139.99,
+      "image": "./src/assets/yoda.webp"
+    }
   ]
 }

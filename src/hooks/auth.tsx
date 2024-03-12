@@ -1,13 +1,20 @@
 // Criando o nosso contexto/hook
 // Passo 1: criar o contexto
 
-import { createContext, useContext, useState } from "react"
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useState,
+} from "react"
 import { User } from "../interfaces/user"
 import { client } from "../network/api"
 
 interface AuthContextData {
   user: User | null
   signIn(credentials: AuthCredentials): void
+  signOut(): void
 }
 
 interface AuthCredentials {
@@ -25,23 +32,45 @@ export default function AuthProvider({
 }: {
   children: React.ReactNode
 }) {
-  const [user, setUser] = useState<User | null>(null)
+  const [user, setUser] = useState<User | null>(() => {
+    const user = localStorage.getItem("user")
 
-  async function signIn({ email, password }: AuthCredentials) {
+    if (!user) {
+      return null
+    }
+
+    const userJSON = JSON.parse(user)
+    return userJSON
+  })
+
+  const signIn = useCallback(async ({ email, password }: AuthCredentials) => {
     const { data } = await client.get<User[]>(`users?email=${email}`)
 
     if (data.length == 0 || data[0].password !== password) {
       throw new Error("Invalid credentials!")
     }
 
-    // localStorage.setItem("user", JSON.stringify(data[0]))
+    localStorage.setItem("user", JSON.stringify(data[0]))
     setUser(data[0])
-  }
+  }, [])
+
+  const signOut = useCallback(() => {
+    localStorage.removeItem("user")
+    setUser(null)
+  }, [])
+
+  // memoize
+  const providerData = useMemo(() => {
+    console.log("Calculei")
+    return {
+      user,
+      signIn,
+      signOut,
+    }
+  }, [user, signIn, signOut])
 
   return (
-    <AuthContext.Provider value={{ user: user, signIn }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={providerData}>{children}</AuthContext.Provider>
   )
 }
 

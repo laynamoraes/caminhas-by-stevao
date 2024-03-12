@@ -1,3 +1,12 @@
+import { useAuth } from "../../hooks/auth"
+
 export default function Ecommerce() {
-  return <h1>E-commerce</h1>
+  const { signOut } = useAuth()
+
+  return (
+    <div>
+      <h1>E-commerce</h1>
+      <button onClick={signOut}>Sair</button>
+    </div>
+  )
 }
