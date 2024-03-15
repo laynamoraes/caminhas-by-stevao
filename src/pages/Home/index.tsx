@@ -1,8 +1,12 @@
-
+import HeaderHome from "../../components/layout/HeaderHome"
+import { Container } from "./styles"
 
 export default function Home() {
 
   return (
-    <h1>Home</h1>
+    <Container>
+      <HeaderHome />
+      {/* <h1>As caominhas dos sonhos do seu pet em um só lugar</h1> */}
+    </Container>
   )
 }

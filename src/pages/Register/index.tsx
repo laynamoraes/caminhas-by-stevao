@@ -1,38 +1,20 @@
 import { FormikProvider, useFormik } from "formik"
 import InputForm from "../../components/Input"
-import { client } from "../../network/api"
-import { User } from "../../interfaces/user"
-import { v4 as uuid } from "uuid"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { createUser } from "../../network/users"
+import { useQuery } from "@tanstack/react-query"
+import { CreateUser, castToUser, validationSchema } from "./helpers"
 
 export default function Register() {
-  const [isLoading, setIsLoading] = useState(false)
   const [finishedCreateUser, setFinishedCreateUser] = useState(false)
   const navigate = useNavigate()
+  // const queryClient = useQueryClient()
 
-  interface CreateUser {
-    name: string
-    email: string
-    password: string
-  }
-
-  // async function loadUsers() {
-  //   setIsLoading(true)
-  //   await new Promise((res) => setTimeout(res, 3000))
-  //   const { data } = await client.get<User[]>("users")
-  //   console.log(data)
-  //   setIsLoading(false)
-  // }
-
-  function castToUser({ name, email, password }: CreateUser): User {
-    return {
-      id: uuid(),
-      name,
-      email,
-      password,
-    }
-  }
+  const { data, isLoading } = useQuery({
+    queryKey: ["user"],
+    queryFn: () => createUser,
+  })
 
   const form = useFormik<CreateUser>({
     initialValues: {
@@ -40,29 +22,20 @@ export default function Register() {
       email: "",
       password: "",
     },
-    // validationSchema,
-    onSubmit: async (values, { resetForm }) => {
+    validationSchema,
+    onSubmit: async (values) => {
       const newUser = castToUser(values)
 
-      setIsLoading(true)
-      await new Promise((res) => setTimeout(res, 1000))
+      createUser(newUser)
 
-      await client.post("users", newUser)
-      resetForm()
-      setIsLoading(false)
       setFinishedCreateUser(true)
-
-      await new Promise((res) => setTimeout(res, 1000))
+      await new Promise((res) => setTimeout(res, 3000))
       setFinishedCreateUser(false)
 
       navigate("/signin")
-      console.log(newUser)
+      console.log(data)
     },
   })
-
-  // useEffect(() => {
-  //   loadUsers()
-  // }, [])
 
   return (
     <div>
