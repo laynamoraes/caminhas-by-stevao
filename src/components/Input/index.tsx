@@ -1,5 +1,6 @@
 import { useField } from "formik"
 import { InputHTMLAttributes } from "react"
+import { Container, ErrorText, Input, Label } from "./styles"
 
 interface InputFormProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string
@@ -13,27 +14,10 @@ export default function InputForm({ label, type, ...props }: InputFormProps) {
   const error = meta.touched && meta.error
 
   return (
-    <div
-      style={{
-        padding: "13px 0px",
-      }}
-    >
-      <label
-        style={{
-          marginRight: "13px",
-        }}
-      >
-        {label}
-      </label>
-      <span
-        style={{
-          color: "#f45",
-        }}
-      >
-        {error}
-      </span>
-      <br />
-      <input type={type} {...field} {...props} />
-    </div>
+    <Container>
+      <Label>{label}</Label>
+      <Input type={type} {...field} {...props} />
+      <ErrorText>{error}</ErrorText>
+    </Container>
   )
 }

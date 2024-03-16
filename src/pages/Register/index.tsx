@@ -5,6 +5,16 @@ import { useNavigate } from "react-router-dom"
 import { createUser } from "../../network/users"
 import { useQuery } from "@tanstack/react-query"
 import { CreateUser, castToUser, validationSchema } from "./helpers"
+import {
+  ButtonContainer,
+  Container,
+  ContentLeft,
+  ContentRight,
+  FormContainer,
+  LinkSignIn,
+} from "./styles"
+import { Button } from "../../components/Button/styles"
+import { ButtonVariant } from "../../components/Button"
 
 export default function Register() {
   const [finishedCreateUser, setFinishedCreateUser] = useState(false)
@@ -38,28 +48,49 @@ export default function Register() {
   })
 
   return (
-    <div>
-      <h1>Cadastrar</h1>
+    <Container>
+      <ContentLeft>
+        <FormContainer>
+          <h1>Cadastre-se</h1>
 
-      <FormikProvider value={form}>
-        <InputForm type="text" name="name" placeholder="Escreva seu nome..." />
-        <br />
-        <br />
-        <InputForm type="email" name="email" placeholder="email@email.com" />
-        <br />
-        <br />
-        <InputForm
-          type="password"
-          name="password"
-          placeholder="Digite sua senha"
-        />
-        <br />
-        <br />
-        <button onClick={form.submitForm}>Entrar</button>
-      </FormikProvider>
+          <FormikProvider value={form}>
+            <InputForm
+              label="Nome"
+              type="text"
+              name="name"
+              placeholder="Escreva seu nome..."
+            />
 
-      {isLoading && <div>Carregando...</div>}
-      {finishedCreateUser && <div>Usuário criado com sucesso!</div>}
-    </div>
+            <InputForm
+              label="E-mail"
+              type="email"
+              name="email"
+              placeholder="email@email.com"
+            />
+
+            <InputForm
+              label="Senha"
+              type="password"
+              name="password"
+              placeholder="Digite sua senha"
+            />
+
+            <ButtonContainer>
+              <Button variant={ButtonVariant.default} onClick={form.submitForm}>
+                Cadastrar
+              </Button>
+            </ButtonContainer>
+
+            <p>
+              Já possui uma conta? <LinkSignIn to="/signin">Sign In</LinkSignIn>
+            </p>
+          </FormikProvider>
+
+          {isLoading && <div>Carregando...</div>}
+          {finishedCreateUser && <div>Usuário criado com sucesso!</div>}
+        </FormContainer>
+      </ContentLeft>
+      <ContentRight />
+    </Container>
   )
 }

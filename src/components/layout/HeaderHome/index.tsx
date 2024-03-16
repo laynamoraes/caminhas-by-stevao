@@ -1,6 +1,4 @@
 import {
-  ButtonRegister,
-  ButtonSignIn,
   ButtonsContainer,
   Container,
   LogoContainer,
@@ -9,7 +7,10 @@ import {
   MenuItems,
 } from "./styles"
 import Logo from "../../../assets/logo.png"
-import { FaShoppingCart } from "react-icons/fa"
+import { Link } from "react-router-dom"
+import ButtonComponent, { ButtonVariant } from "../../Button"
+import ButtonEmphasis from "../../ButtonEmphasis"
+import BagIcon from "../../Bag"
 
 export default function HeaderHome() {
   return (
@@ -23,9 +24,15 @@ export default function HeaderHome() {
         <MenuItems href="#">Sobre</MenuItems>
       </MenuContainer>
       <ButtonsContainer>
-        <ButtonRegister>Cadastrar</ButtonRegister>
-        <ButtonSignIn>Entrar</ButtonSignIn>
-        <FaShoppingCart size="25px" />
+        <Link to="/register">
+          <ButtonComponent variant={ButtonVariant.secondary}>
+            Cadastrar
+          </ButtonComponent>
+        </Link>
+        <Link to="/signin">
+          <ButtonEmphasis>Entrar</ButtonEmphasis>
+        </Link>
+        <BagIcon />
       </ButtonsContainer>
     </Container>
   )

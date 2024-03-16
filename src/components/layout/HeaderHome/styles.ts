@@ -2,12 +2,11 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   width: 100%;
-  /* max-width: 1200px; */
   height: 100px;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 `
 
 export const LogoContainer = styled.div`
@@ -37,26 +36,4 @@ export const ButtonsContainer = styled.div`
   justify-content: right;
   align-items: center;
   gap: 20px;
-`
-
-export const ButtonRegister = styled.button`
-  border: 2px solid #1e1e1e;
-  border-radius: 8px;
-  padding: 10px 18px;
-  background-color: transparent;
-  color: #1e1e1e;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-`
-
-export const ButtonSignIn = styled.button`
-  border: none;
-  border-radius: 8px;
-  padding: 10px 18px;
-  background-color: #ffde59;
-  color: #1e1e1e;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
 `
