@@ -5,16 +5,19 @@ import { useNavigate } from "react-router-dom"
 import { createUser } from "../../network/users"
 import { useQuery } from "@tanstack/react-query"
 import { CreateUser, castToUser, validationSchema } from "./helpers"
+import { Button } from "../../components/Button/styles"
+import { ButtonVariant } from "../../components/Button"
+import StevaoAnimation from "../../assets/stevao-animation.png"
 import {
   ButtonContainer,
   Container,
   ContentLeft,
   ContentRight,
   FormContainer,
+  ImageAnimation,
+  ImageContainer,
   LinkSignIn,
 } from "./styles"
-import { Button } from "../../components/Button/styles"
-import { ButtonVariant } from "../../components/Button"
 
 export default function Register() {
   const [finishedCreateUser, setFinishedCreateUser] = useState(false)
@@ -82,7 +85,7 @@ export default function Register() {
             </ButtonContainer>
 
             <p>
-              Já possui uma conta? <LinkSignIn to="/signin">Sign In</LinkSignIn>
+              Já possui uma conta? <LinkSignIn to="/signin">Entrar</LinkSignIn>
             </p>
           </FormikProvider>
 
@@ -90,7 +93,11 @@ export default function Register() {
           {finishedCreateUser && <div>Usuário criado com sucesso!</div>}
         </FormContainer>
       </ContentLeft>
-      <ContentRight />
+      <ContentRight>
+        <ImageContainer>
+          <ImageAnimation src={StevaoAnimation} />
+        </ImageContainer>
+      </ContentRight>
     </Container>
   )
 }

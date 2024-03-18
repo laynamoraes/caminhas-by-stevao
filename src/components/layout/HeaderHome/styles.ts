@@ -10,13 +10,14 @@ export const Container = styled.div`
 `
 
 export const LogoContainer = styled.div`
-  width: 220px;
-  height: 80px;
+  width: 100%;
+  max-width: 180px;
 `
 
 export const LogoImage = styled.img`
   width: 100%;
   height: 100%;
+  object-fit: cover;
 `
 
 export const MenuContainer = styled.nav`

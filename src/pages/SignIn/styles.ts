@@ -41,7 +41,7 @@ export const FormContainer = styled.div`
   }
 `
 
-export const LinkSignIn = styled(Link)`
+export const LinkRegister = styled(Link)`
   color: #90b2b2;
   font-weight: 700;
 
