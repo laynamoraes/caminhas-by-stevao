@@ -5,6 +5,7 @@ import SignIn from "../pages/SignIn"
 import Register from "../pages/Register"
 import Ecommerce from "../pages/Ecommerce"
 import PrivateRoute from "./PrivateRoute"
+import ProductDetails from "../pages/ProductDetails"
 
 const routes = createBrowserRouter([
   {
@@ -24,6 +25,14 @@ const routes = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Ecommerce />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/ecommerce/:id",
+    element: (
+      <PrivateRoute>
+        <ProductDetails />
       </PrivateRoute>
     ),
   },

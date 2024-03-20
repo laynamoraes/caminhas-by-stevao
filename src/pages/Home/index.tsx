@@ -71,7 +71,7 @@ export default function Home() {
           {data?.map((product) => (
             <Card key={product.id}>
               <ProductImageContainer>
-                <ImageProduct src={product.image} alt="" />
+                <ImageProduct src={product.image} />
               </ProductImageContainer>
               <h3>{product.name}</h3>
               <p>R$ {product.price}</p>

@@ -61,7 +61,7 @@ export default function AuthProvider({
 
   // memoize
   const providerData = useMemo(() => {
-    console.log("Calculei")
+    console.log("useMemo")
     return {
       user,
       signIn,
