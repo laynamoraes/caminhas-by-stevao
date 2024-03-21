@@ -14,6 +14,12 @@
 
 <br>
 
+
+https://github.com/laynamoraes/caminhas-by-stevao/assets/111987747/fcc63965-8e1c-4687-a647-744955355397
+
+
+<br>
+
 ## 💻 Projeto
 
 O projeto é um e-commerce voltado para o mundo pet. Tal projeto foi proposto na aula do curso **Vem Ser Tech - Front-End da Ada Tech em parceria com o iFood**.
