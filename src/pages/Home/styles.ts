@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import BackgroundImage from "../../assets/background-1.png"
+import BackgroundImageTwo from "../../assets/background-2.png"
 
 export const Container = styled.div`
   width: 100%;
@@ -99,7 +100,7 @@ export const ImageProduct = styled.img`
 
 export const ServicesSection = styled.div`
   width: 100%;
-  padding: 0 50px 100px 50px;
+  padding: 0 50px 50px 50px;
 `
 
 export const TitleSection = styled.h2`
@@ -151,4 +152,21 @@ export const DescriptionService = styled.p`
   font-size: 1.125rem;
   color: rgba(30, 30, 30, 0.6);
   text-align: center;
+`
+
+export const About = styled.div`
+  width: 100%;
+  height: 600px;
+  background-image: url(${BackgroundImageTwo});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 232px 50px 100px 50px;
+  display: flex;
+  justify-content: right;
+`
+
+export const AboutContent = styled.div`
+  width: 50%;
+
 `

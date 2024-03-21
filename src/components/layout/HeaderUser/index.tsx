@@ -10,9 +10,10 @@ import Logo from "../../../assets/logo.png"
 import { Link } from "react-router-dom"
 import BagIcon from "../../Bag"
 import { useAuth } from "../../../hooks/auth"
+import { FaPowerOff } from "react-icons/fa6"
 
-export default function HeaderUser() {
-  const { user } = useAuth()
+export default function HeaderUser({ count }: { count: number }) {
+  const { user, signOut } = useAuth()
 
   return (
     <Container>
@@ -21,11 +22,18 @@ export default function HeaderUser() {
       </LogoContainer>
 
       <ButtonsContainer>
-        <Link to="/signin">
-          <ButtonUser>{user?.name.charAt(0)}</ButtonUser>
+        <Link to="">
+          <ButtonUser>{user?.name.charAt(0).toUpperCase()}</ButtonUser>
         </Link>
+
+        <FaPowerOff
+          onClick={signOut}
+          style={{ cursor: "pointer" }}
+          color="#1e1e1e"
+        />
+
         <Divider>|</Divider>
-        <BagIcon />
+        <BagIcon count={count} />
       </ButtonsContainer>
     </Container>
   )

@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+<h1 align="center"> 🐶 Caominhas de Cachorro by Stevão (E-commerce) </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-rodar-o-projeto">Projeto</a>
+</p>
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <img alt="Preview do projeto" src="./src/assets/preview.png">
+</p>
 
-## Expanding the ESLint configuration
+<br>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 💻 Projeto
 
-- Configure the top-level `parserOptions` property like this:
+O projeto é um e-commerce voltado para o mundo pet. Tal projeto foi proposto na aula do curso **Vem Ser Tech - Front-End da Ada Tech em parceria com o iFood**.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<br>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
+
+- ReactJS
+- react-router-dom
+- Axios
+- Formik
+- json-server
+- Styled-components
+- Yup
+- Node
+- Git
+  <br><br>
+
+## ▶ Rodar o projeto
+
+- Primeiro passo, clone o projeto em sua máquina (ou se desejar, crie um fork e após isso clone o projeto)
+- Abra a pasta do projeto no terminal
+- Instale as dependências com o comando `npm install`
+- Inicie o servidor com o comando `npm run dev`, que iniciará o front e `npm run backend` para rodar o json-server.

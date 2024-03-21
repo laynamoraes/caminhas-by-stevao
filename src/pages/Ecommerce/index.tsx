@@ -3,6 +3,8 @@ import { useQuery } from "@tanstack/react-query"
 import HeaderUser from "../../components/layout/HeaderUser"
 import { getProducts } from "../../network/products"
 import Button, { ButtonVariant } from "../../components/Button"
+// import { Product } from "../../interfaces/product"
+// import { addProductInBag } from "../../network/users"
 import {
   Card,
   Description,
@@ -14,11 +16,9 @@ import {
   ProductsSection,
 } from "./styles"
 
-// import { useAuth } from "../../hooks/auth"
-
 export default function Ecommerce() {
-  // const { signOut } = useAuth()
   const [limit, setLimit] = useState<number>(9)
+  const [count, setCount] = useState<number>(0)
   const totalProducts = 24
 
   const { data, isLoading } = useQuery({
@@ -26,10 +26,20 @@ export default function Ecommerce() {
     queryFn: () => getProducts(limit),
   })
 
+  // const { mutateAsync } = useMutation({
+  //   mutationFn: async (id: string | undefined, product: Product ) => {
+  //     addProductInBag(id, product)
+  //   },
+  //   onMutate: () => {
+  //     queryClient.invalidateQueries({
+  //       queryKey: ["users"],
+  //     })
+  //   },
+  // })
+
   return (
     <div>
-      <HeaderUser />
-      {/* <button onClick={signOut}>Sair</button> */}
+      <HeaderUser count={count} />
 
       <ProductsSection>
         <Description>
@@ -51,6 +61,7 @@ export default function Ecommerce() {
                 <Button
                   style={{ width: "100%", border: "1px solid #1e1e1e" }}
                   variant={ButtonVariant.secondary}
+                  onClick={() => setCount(count + 1)}
                 >
                   ADICIONAR À SACOLA
                 </Button>

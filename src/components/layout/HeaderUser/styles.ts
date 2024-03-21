@@ -30,8 +30,8 @@ export const ButtonsContainer = styled.div`
 export const ButtonUser = styled.button`
   border: none;
   border-radius: 100%;
-  padding: 10px 18px;
-  max-width: 112px;
+  width: 40px;
+  height: 40px;
   background-color: #ffde59;
   color: #1e1e1e;
   font-size: 1rem;
@@ -43,6 +43,8 @@ export const ButtonUser = styled.button`
     background-color: #f2d252;
   }
 `
+
+
 
 export const Divider = styled.p`
   font-size: 1.75rem;

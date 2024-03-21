@@ -6,6 +6,8 @@ import { ButtonVariant } from "../../components/Button"
 import { useQuery } from "@tanstack/react-query"
 import { getProductsHome } from "../../network/products"
 import {
+  About,
+  AboutContent,
   Card,
   Container,
   Content,
@@ -27,6 +29,7 @@ import {
 import { Link } from "react-router-dom"
 import { PiDogLight } from "react-icons/pi"
 import { BsBoxSeam, BsTelephoneOutbound } from "react-icons/bs"
+import Footer from "../../components/layout/Footer"
 
 export default function Home() {
   const { data } = useQuery({
@@ -121,6 +124,25 @@ export default function Home() {
           </Service>
         </Services>
       </ServicesSection>
+
+      <About>
+        <AboutContent>
+          <TitleSection style={{ textAlign: "left" }}>Sobre</TitleSection>
+          <SubtitleSection style={{ textAlign: "left", lineHeight: "2rem" }}>
+            Este não é apenas um projeto qualquer. Esta foi a forma que
+            encontrei de eternizar um doguizinho que trouxe muita alegria pra
+            mim e minha família. Stevão era muito alegre, estava sempre agitado
+            (se você tem um dog com certeza sabe como é), mas além disso ele era
+            muito carinhoso da sua maneira. Ele teve algumas caminhas de
+            cachorro ao longo da vida (apelidadas aqui de "caominhas"), mas
+            nenhuma delas foi páreo para sua vontade enorme de morder, rasgar e
+            comer. O importante é que ele teve uma boa vida e com certeza fez a
+            nossa muito melhor também!
+          </SubtitleSection>
+        </AboutContent>
+      </About>
+
+      <Footer />
     </Container>
   )
 }
